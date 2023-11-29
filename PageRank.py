@@ -3,8 +3,13 @@ markovMatrix = [[0.0, 0.5, 0.333333],
                 [1.0, 0.5, 0.333333]]
 
 vector = [1, 4, 7, 5, 2, 9, 11]
-newVector = sorted(vector)
+length = len(vector)
+newVector = []
+for x in range(length):
+    newVector.append((vector[x], x + 1))
+newVector = sorted(newVector)
 print(newVector)
+
 
 
 # dampeningFactor = 0.85
